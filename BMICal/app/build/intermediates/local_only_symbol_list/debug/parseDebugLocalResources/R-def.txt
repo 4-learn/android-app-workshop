@@ -1,0 +1,37 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable background
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id TextView
+id btn_about_me
+id btn_dashboard
+id btn_home
+id button
+id cal
+id height
+id main
+id result
+id suggest
+id textView2
+id textView3
+id weight
+layout activity_main
+layout cal
+mipmap ic_launcher
+mipmap ic_launcher_round
+string advice_average
+string advice_heavy
+string advice_light
+string app_name
+string bmi_btn
+string bmi_height
+string bmi_hello
+string bmi_result
+string bmi_weight
+style Base.Theme.BMICal
+style Theme.BMICal
+xml backup_rules
+xml data_extraction_rules
