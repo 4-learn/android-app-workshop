@@ -1,6 +1,7 @@
 package com.example.bmical;
 
 import android.os.Bundle;
+import android.widget.Toast;
 import android.widget.Button;
 import java.text.DecimalFormat;
 import android.widget.EditText;
@@ -25,9 +26,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Dashboard
+        Button buttonDashboard = findViewById(R.id.btn_dashboard);
+        buttonDashboard.setOnClickListener(goToTODOsToast);
+
         // 設置首頁的按鈕
         Button button1 = findViewById(R.id.btn_home);
         button1.setOnClickListener(goToBMIcal);
+
+        // 設置 Profile 頁面的按鈕
+        Button button2 = findViewById(R.id.btn_about_me);
+        button2.setOnClickListener(goToProfile);
     }
 
     // btn_home - 切換到計算BMI的佈局
@@ -67,6 +76,21 @@ public class MainActivity extends AppCompatActivity {
             } else {                    // 剛剛好
                 fieldsuggest.setText(R.string.advice_average);
             }
+        }
+    };
+
+    private View.OnClickListener goToTODOsToast = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "此功能仍在開發中", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    // btn_home - 切換到 goToProfile 的佈局
+    private View.OnClickListener goToProfile = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            setContentView(R.layout.profile);
         }
     };
 }
