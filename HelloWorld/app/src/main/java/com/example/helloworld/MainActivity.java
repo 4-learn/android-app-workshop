@@ -2,6 +2,9 @@ package com.example.helloworld;
 
 import android.os.Bundle;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -20,5 +23,16 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Button buttonDashboard = findViewById(R.id.btn_dashboard);
+        buttonDashboard.setOnClickListener(goToTODOsToast);
     }
+
+
+    private View.OnClickListener goToTODOsToast = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Toast.makeText(getApplicationContext(), "此功能仍在開發中", Toast.LENGTH_SHORT).show();
+        }
+    };
 }
