@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">gallery</string>
+    <string name="full_image_description">照片解說</string>
+</resources>
