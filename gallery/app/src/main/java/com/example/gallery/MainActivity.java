@@ -1,5 +1,6 @@
 package com.example.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.view.View;
@@ -47,20 +48,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void setThumbnailClickListener(int imageViewId, int imageResId) {
+    private void setThumbnailClickListener(int imageViewId, final int imageResId) {
         ImageView imageView = findViewById(imageViewId);
         imageView.setOnClickListener(v -> {
-            // 切換到顯示全屏圖片的布局
-            setContentView(R.layout.activity_full_image);
-            ImageView fullImageView = findViewById(R.id.fullImageView);
-            fullImageView.setImageResource(imageResId);
-
-            // 設置全屏圖片的點擊事件，點擊後回到縮圖顯示
-            fullImageView.setOnClickListener(view -> {
-                // 切換回縮圖布局並重新設置事件
-                setContentView(R.layout.activity_main);
-                setupGalleryView(); // 再次設置縮圖的點擊事件
-            });
+            // 啟動 FullImageActivity 並傳遞圖片資源 ID
+            Intent intent = new Intent(MainActivity.this, FullImageActivity.class);
+            intent.putExtra("imageResId", imageResId);
+            startActivity(intent);
         });
     }
 }
