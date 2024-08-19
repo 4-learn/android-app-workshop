@@ -10,6 +10,5 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scaleType="fitCenter"
-        android:src="@drawable/sample_image"
-        android:contentDescription="@string/full_image_description" />
+        android:src="@drawable/sample_image" />
 </LinearLayout>
