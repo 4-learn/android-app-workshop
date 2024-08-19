@@ -20,6 +20,19 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.sample_image
     };
 
+    // 定義 ImageView 的資源 ID 數組
+    private int[] imageViewIds = {
+            R.id.imageView1,
+            R.id.imageView2,
+            R.id.imageView3,
+            R.id.imageView4,
+            R.id.imageView5,
+            R.id.imageView6,
+            R.id.imageView7,
+            R.id.imageView8,
+            R.id.imageView9
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupGalleryView() {
         // 設置所有縮圖的點擊事件
         for (int i = 0; i < imageIds.length; i++) {
-            int imageViewId = getResources().getIdentifier("imageView" + (i + 1), "id", getPackageName());
-            setThumbnailClickListener(imageViewId, imageIds[i]);
+            setThumbnailClickListener(imageViewIds[i], imageIds[i]);
         }
     }
 
