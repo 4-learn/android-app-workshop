@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        findViewById(R.id.btn_start_service).setOnClickListener(v ->
+                startService(new Intent(this, MyService.class)));
+
+        findViewById(R.id.btn_stop_service).setOnClickListener(v ->
+                stopService(new Intent(this, MyService.class)));
 
         // Dashboard
         Button buttonDashboard = findViewById(R.id.btn_dashboard);
