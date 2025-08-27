@@ -13,8 +13,26 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.content.Intent;
+import android.content.IntentFilter;
 
 public class MainActivity extends AppCompatActivity {
+
+    private AirplaneModeReceiver airplaneReceiver = new AirplaneModeReceiver();
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 動態註冊 Receiver
+        IntentFilter filter = new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+        registerReceiver(airplaneReceiver, filter);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // 記得解除註冊，避免 memory leak
+        unregisterReceiver(airplaneReceiver);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
