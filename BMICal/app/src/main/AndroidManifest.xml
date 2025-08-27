@@ -31,6 +31,11 @@
             </intent-filter>
         </receiver>
 
+        <provider
+            android:name=".DemoProvider"
+            android:authorities="com.example.bmical.demoprovider"
+            android:exported="true" />
+
     </application>
 
 </manifest>
