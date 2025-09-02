@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Dashboard
         Button buttonDashboard = findViewById(R.id.btn_dashboard);
-        buttonDashboard.setOnClickListener(goToTODOsToast);
+        buttonDashboard.setOnClickListener(goToDashboard);
 
         // 設置首頁的按鈕
         Button button1 = findViewById(R.id.btn_home);
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener goToBMIcal = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            setContentView(R.layout.cal);
+            setContentView(R.layout.bmi);
 
             // 在新佈局中再次綁定視圖並設置事件處理器
             Button calculateButton = findViewById(R.id.button);
@@ -79,11 +79,12 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private View.OnClickListener goToTODOsToast = new View.OnClickListener() {
+    private View.OnClickListener goToDashboard = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Toast.makeText(getApplicationContext(), "此功能仍在開發中", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.dashboard);
         }
+
     };
 
     // btn_home - 切換到 goToProfile 的佈局

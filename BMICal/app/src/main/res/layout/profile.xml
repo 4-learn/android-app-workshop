@@ -45,4 +45,11 @@
         android:text="儲存"
         android:enabled="false" />
 
+    <Button
+        android:id="@+id/btn_dashboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回到 Dashboard"
+        android:enabled="true" />
+
 </LinearLayout>
