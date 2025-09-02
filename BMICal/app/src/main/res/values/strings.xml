@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">BMICal</string>
+    <string name="app_name">BMI_Calculator</string>
+
     <string name="bmi_hello">哈囉!BMI</string>
     <string name="bmi_height">身高 (cm)</string>
     <string name="bmi_weight">體重 (kg)</string>

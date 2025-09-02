@@ -1,4 +1,4 @@
-package com.example.bmical;
+package my.project;
 
 import org.junit.Test;
 
