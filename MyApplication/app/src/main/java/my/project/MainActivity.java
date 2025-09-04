@@ -114,25 +114,21 @@ public class MainActivity extends AppCompatActivity {
         EditText fieldheight = findViewById(R.id.height);
         EditText fieldweight = findViewById(R.id.weight);
 
-        try {
-            double height = Double.parseDouble(fieldheight.getText().toString()) / 100.0; // 身高 m
-            double weight = Double.parseDouble(fieldweight.getText().toString());         // 體重 kg
-            double BMI = weight / (height * height);
+        double height = Double.parseDouble(fieldheight.getText().toString()) / 100.0; // 身高 m
+        double weight = Double.parseDouble(fieldweight.getText().toString());         // 體重 kg
+        double BMI = weight / (height * height);
 
-            // 結果
-            TextView result = findViewById(R.id.result);
-            result.setText(getText(R.string.bmi_result) + nf.format(BMI));
+        // 結果
+        TextView result = findViewById(R.id.result);
+        result.setText(getText(R.string.bmi_result) + nf.format(BMI));
 
-            // 建議
-            TextView fieldsuggest = findViewById(R.id.suggest);
-            if (BMI > 25.0D)
-                fieldsuggest.setText(R.string.advice_heavy);
-            else if (BMI < 20.0D)
-                fieldsuggest.setText(R.string.advice_light);
-            else
-                fieldsuggest.setText(R.string.advice_average);
-        } catch (Exception error) {
-            Toast.makeText(MainActivity.this, "要先輸入身高體重", Toast.LENGTH_SHORT).show();
-        }
+        // 建議
+        TextView fieldsuggest = findViewById(R.id.suggest);
+        if (BMI > 25.0D)
+            fieldsuggest.setText(R.string.advice_heavy);
+        else if (BMI < 20.0D)
+            fieldsuggest.setText(R.string.advice_light);
+        else
+            fieldsuggest.setText(R.string.advice_average);
     };
 }
