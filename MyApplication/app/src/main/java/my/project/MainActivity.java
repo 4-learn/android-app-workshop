@@ -131,8 +131,10 @@ public class MainActivity extends AppCompatActivity {
                 fieldsuggest.setText(R.string.advice_light);
             else
                 fieldsuggest.setText(R.string.advice_average);
-        } catch (Exception error) {
-            Toast.makeText(MainActivity.this, "要先輸入身高體重", Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast msg = Toast.makeText(MainActivity.this, "要先輸入身高體重", Toast.LENGTH_SHORT);
+            msg.show();
         }
+
     };
 }
