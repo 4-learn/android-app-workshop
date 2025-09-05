@@ -68,7 +68,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:scaleType="centerCrop"
-            android:src="@drawable/sample_image" />
+            android:src="@drawable/a1" />
 
         <ImageView
             android:id="@+id/imageView7"

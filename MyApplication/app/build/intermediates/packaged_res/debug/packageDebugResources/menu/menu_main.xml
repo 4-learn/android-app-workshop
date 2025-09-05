@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="設定" />
+
+    <item android:id="@+id/toast"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="土司!" />
+
+    <item android:id="@+id/new_activity"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom"
+        android:title="新畫面" />
+</menu>

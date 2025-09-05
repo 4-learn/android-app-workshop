@@ -1,0 +1,5 @@
+com.example.bmical.test.app-core-1.6.1-0 C:\Users\SCE\.gradle\caches\transforms-4\716a20b02f5383d477666df1423e99fe\transformed\core-1.6.1\res
+com.example.bmical.test.app-androidTest-1 D:\workshop\android-app-workshop\BMICal\app\build\generated\res\resValues\androidTest\debug
+com.example.bmical.test.app-mergeDebugAndroidTestResources-2 D:\workshop\android-app-workshop\BMICal\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.bmical.test.app-mergeDebugAndroidTestResources-3 D:\workshop\android-app-workshop\BMICal\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.bmical.test.app-debugAndroidTest-4 D:\workshop\android-app-workshop\BMICal\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

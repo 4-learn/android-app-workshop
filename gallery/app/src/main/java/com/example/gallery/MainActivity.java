@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
             R.drawable.sample_image,
             R.drawable.sample_image,
             R.drawable.sample_image,
-            R.drawable.sample_image,
+            R.drawable.a1,
             R.drawable.sample_image,
             R.drawable.sample_image,
             R.drawable.sample_image
